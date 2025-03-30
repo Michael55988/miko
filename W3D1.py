@@ -238,6 +238,81 @@
 
 
 
+# daily challeng:
+
+# import math
+
+# class pagination:
+#     def __init__(self, items=None, pageSize=10):
+#         self.items = items if items is not None else []
+#         self.pageSize = int(pageSize)
+#         self.currentPage = 1
+#         self.totalPages = math.ceil(len(self.items) / self.pageSize)     #.ceil = ca arrondit un nombre vers le haut. exemple si jai 3,2 ca va arrondir a 4
+
+# # alphabetList = list("abcdefghijklmnopqrstuvwxyz")   
+# # p = pagination(alphabetList, 4)      # je veux que mon p soit egale a la liste alphabet et quil imprime 4 items par page
+# #        # print(p.totalPages)                  # 7 (26 lettres / 4 = 6.5, arrondi à 7 pages)
+#     def getVisibleItems(self):
+#         start_index = (self.currentPage - 1) * self.pageSize     #prmiere index de la page
+#         end_index = start_index + self.pageSize                  #dernier index de la page
+#         return self.items[start_index:end_index]                 #retour de la liste
+
+# # alphabetList = list("abcdefghijklmnopqrstuvwxyz")   
+# # p = pagination(alphabetList, 4)  #['a','b','c','d']    
+
+# # print(p.getVisibleItems())   
+
+
+#     def nextPage(self):
+#         if self.currentPage < self.totalPages:  #verifi si jai la possibilite daller a la page suivante
+#             self.currentPage += 1
+#             return self
+        
+#     def prevPage(self):
+#         if self.currentPage > 1:     #je verifie si je suis pas deja a la premiere page
+#             self.currentPage -= 1
+#             return self
+        
+#     def firstPage(self):
+#         self.currentPage = 1   #met la page actuelle a 1
+#         return self
+    
+#     def lastPage(self):
+#         self.currentPage = self.totalPages      #met la page actuelle a la derniere
+#         return self
+        
+# # alphabetList = list("abcdefghijklmnopqrstuvwxyz")   
+# # p = pagination(alphabetList, 4)
+# # p.nextPage()
+# # print(p.getVisibleItems())
+
+# # p.prevPage()
+# # print(p.getVisibleItems())
+
+# # p.firstPage()
+# # print(p.getVisibleItems())
+
+# # p.lastPage()
+# # print(p.getVisibleItems())
+   
+#     def goToPage(self, pageNum):
+#         pageNum = int(pageNum)  # convertit en entier si cest un float
+#         if pageNum < 1:
+#             self.currentPage = 1  # si on demande une page trop basse on met page 1
+#         elif pageNum > self.totalPages:
+#             self.currentPage = self.totalPages  # si trop grande on met la derniere
+#         else:
+#             self.currentPage = pageNum  # sinon on va a la page demande
+#         return self
+
+# alphabetList = list("abcdefghijklmnopqrstuvwxyz")   
+# p = pagination(alphabetList, 4)
+
+# p.goToPage(2)          #['e','f','g','h']
+# print(p.getVisibleItems())
+
+
+
 
 
 
