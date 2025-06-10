@@ -1,0 +1,64 @@
+
+// exercice not bad
+
+const sentence = 'the movie is bad not sacha'
+
+const splitSentence = sentence.split(" ")
+// ] [ "the" , "movie", "is" , "not" , "so", "bad" ]
+
+const wordNot = splitSentence.indexOf("not")
+// index of not - 0 || 1 || 2 || 3 || 4 ..... splitsentece.length - 1
+
+const wordBad = splitSentence.indexOf("bad")
+// index of bad - 0 || 1 || 2 || 3 || 4 ..... splitsentece.length - 1
+
+let result;
+
+
+if (  wordNot >= 0 && wordBad  >= 0 &&  wordNot  < wordBad  ){
+splitSentence.splice(  wordNot, ( wordBad - wordNot + 1 ) , "good" )
+// splice = [ "the" , "movie", "is" , "good" ]
+// start = index 3 , to delete =  index 5 - index 3 + 1 , replace with "good" 
+result = splitSentence.join(' ');
+}
+else {
+    result = sentence;
+}
+
+console.log(result)
+
+
+
+// exercise stars
+
+// console.log("*")
+// console.log("**")
+// console.log("***")
+// console.log("****")
+// console.log("*****")
+// console.log("******")
+
+// 2 nested loops
+for ( let i = 1 ; i <= 6 ; i++){
+
+    let floor = ""
+
+    for ( let y = 1; y <= i; y++){
+
+        floor += "*"
+    
+    }
+
+    console.log(floor);
+    2
+}
+
+// one loop
+for ( let i = 1 ; i <= 6 ; i++){
+
+
+console.log("*".repeat(i))
+
+
+
+}
